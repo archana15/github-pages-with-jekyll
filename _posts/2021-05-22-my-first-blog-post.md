@@ -1,2 +1,4 @@
-title: "My Blog Post"
+---
+title: "My blog post"
 date: 2021-05-22
+---
