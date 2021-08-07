@@ -23,5 +23,4 @@ Some of the other interesting projects that I have worked on include
 
 If you have any suggestions or would like to get in touch with me please feel free to message me on my [linkedin](www.linkedin.com/in/archana-kalburgi) 
 
-
 Email: archanakalburgi@gmail.com 
