@@ -1,4 +1,7 @@
 Choosing the loops! 
+
+# Understanding both the loops 
+
 - `for loop` is used when you know how many times you want to iterate over an iterable
 - the counter that keep keeps the track of number of times you have iterated over something is incremented or decremented until a condition is met
 - where as while loops behaves differently from for loop, although while loop is also used to iterate
