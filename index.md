@@ -1,5 +1,3 @@
 ---
-title: About
+layout: home
 ---
-
-My learnings 
