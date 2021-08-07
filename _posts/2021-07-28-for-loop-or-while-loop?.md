@@ -1,4 +1,9 @@
-Choosing the loops! 
+---
+layout: post
+title:  "Choosing the loops!"
+date:   2021-07-28 
+categories: jekyll update
+---
 
 # Understanding both the loops 
 
