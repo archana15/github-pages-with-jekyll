@@ -5,4 +5,4 @@ permalink: /about/
 ---
 I am Archana Kalburgi.
 
-Email: anupkalburgi`@`gmail.com
+Email: archanakalburgi@gmail.com
