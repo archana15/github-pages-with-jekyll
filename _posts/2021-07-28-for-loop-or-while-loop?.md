@@ -2,10 +2,9 @@
 layout: post
 title:  "Choosing the loops!"
 date:   2021-07-28 
-categories: jekyll update
 ---
 
-# Understanding both the loops 
+Based on my understanding
 
 - `for loop` is used when you know how many times you want to iterate over an iterable
 - the counter that keep keeps the track of number of times you have iterated over something is incremented or decremented until a condition is met
