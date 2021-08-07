@@ -1,4 +1,4 @@
-Here is an interesting problem that I really enjoyed solving.
+Here is an interesting problem that I enjoyed solving.
 
 # Problem statement
 
