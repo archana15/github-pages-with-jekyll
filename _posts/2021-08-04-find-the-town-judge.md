@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "My blog post"
-date: 2021-05-22
+title: "Find the town judge"
+date: 2021-08-05
 ---
 Here is an interesting problem that I enjoyed solving.
 
