@@ -1,12 +1,15 @@
 title: Archana Kalburgi
-author: Archana Kalburgi
-email: archanakalburgi@gmail.com
+author:
+  name:  Archana Kalburgi
+  email: archanakalburgi@gmail.com
+  linkedin: archana-kalburgi
+  github: archanakalburgi
+  
 description: > # this means to ignore newlines until "baseurl:"
 
 # social links
 # twitter_username: your-twitter-handle # DO NOT include the @ character, or else the build will fail!
 github_username:  archanakalburgi # DO NOT include the @ character, or else the build will fail!
-linkedin: archana-kalburgi
 
 show_excerpts: false # set to false to remove excerpts on the homepage
 theme: minima
