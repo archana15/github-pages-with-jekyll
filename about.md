@@ -21,6 +21,6 @@ Some of the other interesting projects that I have worked on include
 - [Reduced dimension of data using fisher discriminant analysis(FDA)](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign3/Q3_FDA_pima_indians.ipynb)
 - [Identified misclassified labels using perceptron](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign3/Q4_Perceptron.ipynb)
 
-If you have any suggestions or would like to get in touch with me please feel free to message me on my [linkedin](www.linkedin.com/in/archana-kalburgi) 
+If you have any suggestions or would like to get in touch with me please feel free to message me on my [linkedin](https://www.linkedin.com/in/archana-kalburgi/) 
 
 Email: archanakalburgi@gmail.com 

@@ -5,14 +5,14 @@ date:   2021-07-28
 ---
 Based on my understanding
 
-- `for loop` is used when you know how many times you want to iterate over an iterable
+- **for loop** is used when you know how many times you want to iterate over an iterable
 - the counter that keep keeps the track of number of times you have iterated over something is incremented or decremented until a condition is met
 - where as while loops behaves differently from for loop, although while loop is also used to iterate
-- `while loops` are used when you are not sure of how many time you want to iterate 
+- **while loops** are used when you are not sure of how many time you want to iterate 
 - a while loop run over a code over and over until a condition becomes  _false_ 
 - where as `if condition` lets us run a block of code below it only if the condition is _true_
 
-### Examples to illustrate when do we use a `while loop` and when do we use a `for loop`: 
+### Examples: 
 
 #### Search a value 'X'  given a head of a linked list
 - in this case we do not know the length the linked list we are just give a value that is present in the linked list and the head of the linked list
@@ -95,6 +95,6 @@ def temperature_recursion():
 
 temperature_recursion() 
 ```
-- with recursion one can save the trouble of making the decision on loops and call the function recursively
+- with recursion one can avoid making the decision on loops and call the function recursively
 
 _This leaves us with the question of when do we take a recursive approach verses when do we take an iterative approach!_

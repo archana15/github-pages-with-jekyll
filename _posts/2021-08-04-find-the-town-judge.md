@@ -25,7 +25,7 @@ For Example:
 
 # Understand 
 
-Happy cases:
+**Happy cases**:
 
 Input: n = 3, trust = [[1,2],[3,2]]
 Output: 2
