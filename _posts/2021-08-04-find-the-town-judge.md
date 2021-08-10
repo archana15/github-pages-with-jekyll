@@ -78,7 +78,7 @@ Output: -1
 - Oh, yes hashmaps!! 
 - we could have n keys whose values can be the people he/she trusts 
 - since every person is unique, the keys are unique 
-- also, there is no to maintain the order of people 
+- also, there is no need to maintain the order of people 
 - hashmaps have constant time look up, which will make our solution faster 
 - so hashmap it is!
 
