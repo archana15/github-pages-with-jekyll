@@ -130,10 +130,10 @@ Output: -1
 
 # Review
 consider Input: n = 2, trust = [[1,2]]
-for this problem, 
-graph = {1: {2}, 2: set()}
-in_degree = {1: 1, 2: 0} 
-judge = 2 (in_degree[2]==0)
+- for this problem, 
+    - graph = {1: {2}, 2: set()}
+    - in_degree = {1: 1, 2: 0} 
+    - judge = 2 (in_degree[2]==0)
 
 Output: 2
 
