@@ -27,25 +27,25 @@ For Example:
 
 **Happy cases**:
 
-Input: n = 3, trust = [[1,2],[3,2]]
+Input: n = 3, trust = [[1,2],[3,2]]\
 Output: 2
 
-Input: n = 4, trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]
+Input: n = 4, trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]\
 Output: 3
 
-Input: n = 4, trust = [[1,2],[2,4],[3,4],[1,4]]
+Input: n = 4, trust = [[1,2],[2,4],[3,4],[1,4]]\
 Output: 4
 
-Input: n = 3, trust = [[1,2],[2,3]]
+Input: n = 3, trust = [[1,2],[2,3]]\
 Output: -1
 
-Input: n = 3, trust = [[1,3],[2,3],[3,1]]
+Input: n = 3, trust = [[1,3],[2,3],[3,1]]\
 Output: -1
 
-Input: n = 2, trust = [[1,2],[2,1]]
+Input: n = 2, trust = [[1,2],[2,1]]\
 Output: -1
 
-Input: n = 5, trust = [[1,3],[1,2],[1,4],[1,5]]
+Input: n = 5, trust = [[1,3],[1,2],[1,4],[1,5]]\
 Output: -1
 
 # Match 
@@ -67,7 +67,7 @@ Output: -1
         - space = O(m*m-1) ≈ O(m<sup>2</sup>), where m = n
 
 **Linked List**
-- in this case linked list will not optimize the m<sup>2</sup> complexity 
+- linked list will not optimize the m<sup>2</sup> complexity 
 
 **Stack and Queue**
 - stacks and Queue data structure help us in maintaining LIFO or FIFO order
@@ -75,14 +75,14 @@ Output: -1
 - so it's better to avoid stack or queue 
 
 **Heap**
-- Since we are not required to sort heap will not be useful to solve this problem 
+- Since we are not required to sort, heap will not be useful to solve this problem 
 
 **Hashmap**
 - Oh, yes hashmaps!! 
-- we could have n keys whose values can be the people he/she trusts 
+- we could have n keys whose values can be the people a particular person trusts 
 - since every person is unique, the keys are unique 
 - also, there is no need to maintain the order of people 
-- hashmaps have constant time look up, which will make our solution faster 
+- plus hashmaps have constant time look up, which will make our solution faster 
 - so hashmap it is!
 
 # Plan
@@ -131,8 +131,9 @@ Output: -1
         return judge
 ```
 
-# Review
-consider Input: n = 2, trust = [[1,2]]
+# Review 
+
+Input: n = 2, trust = [[1,2]]
 - for this problem, 
     - graph = {1: {2}, 2: set()}
     - in_degree = {1: 1, 2: 0} 
@@ -142,7 +143,7 @@ Output: 2
 
 # Evaluate 
 
-- time: n+t+n+n ~ O(3n+t) ~ O(n+t)
+- time: n + t + n + n ~ O(3n + t) ~ O(n + t)
     - if t << n ~ O(n)
     - where n = n(number of people) and t = len(trust) 
 - space: O(n) 
