@@ -51,10 +51,13 @@ Output: -1
 # Match 
 
 **Lists**:
-- iterate _trust_ to create a list of list, 
-    - where list[i] = list of people i trusts, 
-- find a member common to all the lists (town judge)
-- if no common member found: return -1 
+```sh
+// iterate _trust_ to create a list of list, 
+    list[i] = list of people i trusts, 
+// find a member common to all the lists (town judge)
+// if no common member found: 
+    return -1 
+```
 - complexity:
     - time: O(n), where n = len(_trust_)
         - time to traverse _trust_ array 
