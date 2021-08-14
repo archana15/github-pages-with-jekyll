@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kth largest value of binary search tree"
-date: 2021-08-11
+date: 2021-08-14
 ---
 The following problem helped me understand that in-order traversal of a binary search tree yields a sorted array.
 
@@ -16,20 +16,20 @@ Assume the following:
 
 # Understand 
 
-Input: [15, 5, 20, 2, 5, 17, 22, 1, 3], k = 3
-Output: 17
+Input: [15, 5, 20, 2, 5, 17, 22, 1, 3], k = 3\
+Output: 17\
 Explanation: after 22 and 20, 17 is the largest values in the given BST
 
-Input: [1] k=1 
+Input: [1], k=1\ 
 Output: 1
 
-Input: [1] k=2 
+Input: [1], k=2\ 
 Output: not a valid case
 
-Input: [2,1,3] k=3 
+Input: [2,1,3], k=3\ 
 Output: 3
 
-Input: [1,null,2,null,3,null,4] k=0
+Input: [1,null,2,null,3,null,4], k=0\
 Output: Not a valid case
 
 # Match
@@ -52,7 +52,7 @@ Output: Not a valid case
 - both the data structure are not useful for solving the problem 
 
 **Stack and Queue**
-- we are not require to look for or maintain LIFO or FIFO order
+- we are not required to look for or maintain LIFO or FIFO order
 
 **Heap**
 - Heap are very helpful to find the kth largest or kth smallest elements 
@@ -62,12 +62,12 @@ Output: Not a valid case
 // return kth popped item 
 ```
 - complexity:
-		- time: O(n) + O(n log n) -> O(n log n)
-		- space: O(n)
+	- time: O(n) + O(n log n) -> O(n log n)
+	- space: O(n)
 - all though with heap we can obtain the kth element, it did not improve the complexity of the algorithm that we came up by using list
 
 # Techniques
-- _in-order traversal, on of depth first search traversals of a binary search tree gives a sorted array_
+- _in-order traversal, which is one of depth first search traversals of a binary search tree gives a sorted array_
 - we can take advantage of this property to arrive at the solution
 
 ```sh
