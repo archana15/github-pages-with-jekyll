@@ -21,7 +21,7 @@ Return the modified image after performing the flood fill.
 Input: image = [[1,1,1]] , sr=0, sc=1, newColor=2\
 ![](/images/input_ff.jpg)\
 Output: [[2,2,2]]\
-![](/images/output_ff.jpg)
+![](/images/output_ff.jpg) 
 
 Input: image = [[1, 0, 1, 1],[1, 1, 1, 1]], sr=1, sc=1, newColor=2\
 Output: [[2 0 2 2],[2 2 2 2]]
