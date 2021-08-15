@@ -1,0 +1,99 @@
+---
+layout: post
+title: "Traverse a matrix to perform flood fill"
+date: 2021-08-15
+---
+
+Solving the following problem helped me better understand how to traverse a matrix and how to get the valid neighbors of a cell in the matrix
+
+# Problem statement
+
+An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
+
+You are also given three integers sr, sc, and newColor. You should perform a flood fill on the image starting from the pixel image[sr][sc].
+
+To perform a flood fill, consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color), and so on. Replace the color of all of the aforementioned pixels with newColor.
+
+Return the modified image after performing the flood fill.
+
+# Understand 
+
+Input: image = [[1,1,1]] , sr=0, sc=1, newColor=2\
+![](/images/input_ff.jpg)\
+Output: [[2,2,2]]\
+![](/images/output_ff.jpg)
+
+Input: image = [[1, 0, 1, 1],[1, 1, 1, 1]], sr=1, sc=1, newColor=2\
+Output: [[2 0 2 2],[2 2 2 2]]
+
+Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, newColor = 2\
+Output: [[2,2,2],[2,2,0],[2,0,1]]
+
+Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, newColor = 2\
+Output: [[2,2,2],[2,2,2]]
+
+# Match
+
+**Techniques**
+
+- since it's already given that we have to consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, we will perform DFS from image[sr][sc] and reach it's valid neighbor to change the value to newColor 
+- we change the value only if the value of the is is equal to image[sr][sc] value
+
+# Plan
+
+```sh
+def function(image, sr, sc, newColor):
+    source = image[sr][sc]
+    image[sr][sc] = newColor
+    call dfs on image[sr][sc]
+    return image
+
+def dfs():
+    dfs from sr,sc
+    get valid neighbors for (sr,sc)
+        if image[row][col] == source:
+            image[row][col] = newColor
+```
+
+# Implement 
+
+```sh
+class Flood_fill:
+    def valid_neighbors(self, r,c,image):
+        valid = []
+        neighbors = [(r+1,c),(r-1,c),(r,c+1),(r,c-1)]
+        for (nr,nc) in neighbors:
+            if len(image) > nr >= 0 and len(image[0]) > nc >= 0:
+                valid.append((nr,nc))
+        return valid
+        
+    def dfs(self, row, col, source, image, color, visited):
+        for (nr,nc) in self.valid_neighbors(row, col, image):
+            if (nr,nc) not in visited:
+                visited.add((nr,nc))
+                if image[nr][nc] == source:
+                    image[nr][nc] = color
+                    self.dfs(nr,nc,source,image, color, visited)
+                
+        
+    def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
+        source = image[sr][sc]
+        image[sr][sc] = newColor
+        for row in range(len(image)):
+            for col in range(len(image[0])):
+                if row==sr and col==sc:
+                    self.dfs(row, col, source, image, newColor, set())
+        return image
+```
+# Review 
+
+- for input image = [[1,1,1]] , sr=0, sc=1, newColor=2, we would traverse in the following order\
+[(0, 2), (0, 0)]\
+[(0, 1)]\
+[(0, 1)] 
+
+- complexity:
+    - time: O(n) where n=number of pixels in the image
+    - space: O(n) size of call stack while calling dfs
+
+
