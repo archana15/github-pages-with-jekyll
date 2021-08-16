@@ -110,10 +110,31 @@ class Flood_fill:
 ```
 # Review 
 
-- for input image = [[1,1,1]] , sr=0, sc=1, newColor=2, we would traverse in the following order\
-[(0, 2), (0, 0)]\
-[(0, 1)]\
-[(0, 1)] 
+- consider the input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, newColor = 2
+- the bfs traversal of the matrix is shown in the figure below 
+- ![BFS](/images/bfs.jpg)
+    - the numbers in green and that are circled represent the order in which the cells are visited
+- status of the queue while doing a bfs traversal\
+1 1 [(2, 1), (0, 1), (1, 2), (1, 0)]\
+    0 1 [(1, 1), (0, 2), (0, 0)]\
+    1 0 [(2, 0), (0, 0), (1, 1)]\
+    0 2 [(1, 2), (0, 1)]\
+    0 0 [(1, 0), (0, 1)]\
+    2 0 [(1, 0), (2, 1)]
+
+- the dfs traversal of the matrix is shown in the figure below 
+- ![DFS](/images/dfs.jpg)
+    - the numbers in green and that are circled represent the order in which the cells are visited
+- status of the stack while doing a dfs traversal\
+1 1 [(2, 1), (0, 1), (1, 2), (1, 0)]\
+0 1 [(2, 1), (0, 1), (1, 2), (1, 0)]\
+0 2 [(1, 1), (0, 2), (0, 0)]\
+0 0 [(1, 1), (0, 2), (0, 0)]\
+1 0 [(1, 0), (0, 1)]\
+2 0 [(2, 0), (0, 0), (1, 1)]
+
+
+# Evaluate
 
 - complexity:
     - time: O(n) where n=number of pixels in the image
