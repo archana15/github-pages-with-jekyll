@@ -72,7 +72,7 @@ Output: Not a valid case
 - we can traverse a tree using BFS or DFS
 - DFS has preorder, postorder and inorder traversal
 
-### Exploring the traversals
+# Exploring the traversals
 - let us consider out first example, tree = [15,5,20,2,5,17,22,1,3] and check the order of the nodes that we visit with each traversal 
 
 **Breadth first search**
