@@ -18,6 +18,7 @@ Assume the following:
 
 Input: [15, 5, 20, 2, 5, 17, 22, 1, 3],k = 3\
 Output: 17\
+![](/images/input_kbst.jpg)\
 Explanation: after 22 and 20, 17 is the largest values in the given BST
 
 Input: [1], k=1\
@@ -67,11 +68,33 @@ Output: Not a valid case
 - all though with heap we can obtain the kth element, it did not improve the complexity of the algorithm that we came up by using list
 
 # Techniques
-- _in-order traversal, which is one of depth first search traversals of a binary search tree gives a sorted array_
-- we can take advantage of this property to arrive at the solution
+
+- we can traverse a tree using BFS or DFS
+- DFS has preorder, postorder and inorder traversal
+
+### Exploring the traversals
+- let us consider out first example, tree = [15,5,20,2,5,17,22,1,3] and check the order of the nodes that we visit with each traversal 
+
+**Breadth first search**
+- bfs traversal of BST = [[1],[2,3],[5,5,15,17],[20,22]]
+
+**Preorder traversal**
+- preorder traversal of BST = [15,5,20,2,5,17,22,1,3] is [15,5,2,1,3,5,20,17,22]
+
+**Postorder traversal**
+- postorder traversal of BST = [15,5,20,2,5,17,22,1,3] is [1,3,2,5,5,17,22,20,15]
+
+**Inorder traversal**
+- inorder traversal of BST = [15,5,20,2,5,17,22,1,3] is [1,2,3,5,5,15,17,20,22]
+
+- comparing all the traversals it is safe to conclude that _in-order traversal yields a sorted array_
+- taking advantage of this property we can arrive at the solution arrive at the solution
+- high level steps involved are
+	- traverse tree in inorder fashion - build array of nodes
+	- return array[len(array)-k]
 
 ```sh
-// dfs - inorder recursive
+// dfs - inorder recursive 
 // list of nodes
 // return kth element from end
 ```

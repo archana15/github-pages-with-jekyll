@@ -18,13 +18,18 @@ Return the modified image after performing the flood fill.
 
 # Understand 
 
-Input: image = [[1,1,1]] , sr=0, sc=1, newColor=2\
+Input: image = [[1,0,1,1],[1,1,1,1]] , sr=1, sc=1, newColor=2\
 ![](/images/input_ff.jpg)\
-Output: [[2,2,2]]\
+Output: [[2,0,2,2],[2,2,2,2]]\
 ![](/images/output_ff.jpg) 
+- Explanation:
+    - we have to perform flood fill from the cell with row = sr and column = sc
+    - in this example we can perform flood fill on the cells left, right and above the cell (sr,sc) and change their values to newColor only if image[row][col] == image[sr][sc] 
+    - since the image[sr-1][sc] != image[sr][sc], we do not change it's value 
+    - change the values of the neighbors of the cells you visit
 
-Input: image = [[1, 0, 1, 1],[1, 1, 1, 1]], sr=1, sc=1, newColor=2\
-Output: [[2 0 2 2],[2 2 2 2]]
+Input: image = [1,1,1]], sr=0, sc=1, newColor=2\
+Output: [[2,2,2]]
 
 Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, newColor = 2\
 Output: [[2,2,2],[2,2,0],[2,0,1]]
@@ -36,7 +41,8 @@ Output: [[2,2,2],[2,2,2]]
 
 **Techniques**
 
-- since it's already given that we have to consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, we will perform DFS from image[sr][sc] and reach it's valid neighbor to change the value to newColor 
+- since it's already given that we have to consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, we can perform either DFS or BFS from image[sr][sc] and reach it's valid neighbor to change the value to newColor 
+- in this post we will look at both bfs and dfs implementation 
 - we change the value only if the value of the is is equal to image[sr][sc] value
 
 # Plan
@@ -53,6 +59,9 @@ def dfs():
     get valid neighbors for (sr,sc)
         if image[row][col] == source:
             image[row][col] = newColor
+
+def bfs():
+
 ```
 
 # Implement 
@@ -74,8 +83,18 @@ class Flood_fill:
                 if image[nr][nc] == source:
                     image[nr][nc] = color
                     self.dfs(nr,nc,source,image, color, visited)
-                
-        
+    
+    def bfs(self, row, col, image, visited, source, color):
+        queue = [(row, col)] 
+        while queue:
+            r, c = queue.pop(0)
+            for (nr,nc) in self.valid_neighbors(r, c, image):
+                if (nr,nc) not in visited:
+                    if image[nr][nc] == source:
+                        image[nr][nc] = color
+                        queue.append((nr,nc))
+                        visited.add((nr,nc))
+
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
         source = image[sr][sc]
         image[sr][sc] = newColor
@@ -83,6 +102,10 @@ class Flood_fill:
             for col in range(len(image[0])):
                 if row==sr and col==sc:
                     self.dfs(row, col, source, image, newColor, set())
+                    # to call bfs 
+                    visited = set()
+                    self.bfs(row, col, image, visited, source, newColor)
+                    visited.add((row,col))
         return image
 ```
 # Review 

@@ -56,14 +56,14 @@ Output: Not a valid test case
 
 ```sh
 // result = []
-// for num in array:
-    // if (targetSum - num) in array and (targetSum - num) != num:
+// for num in array: # t: O(n)
+    // if (targetSum - num) in array and (targetSum - num) != num: # t: O(n) in operation 
         result->add[num, (targetSum-num)]
         return result
 return result 
 ```
 - Complexity:
-    - time: O(n)
+    - time: O(n<sup>2</sup>), where n=len(array)
     - space: O(1) 
 
 **Linked list**
@@ -178,3 +178,4 @@ def two_number_sum(array, targetSum):
 # Evaluate 
 
 - this problem has solution of varied time and space complexity 
+- before implementation we have decide on space and time trade off
