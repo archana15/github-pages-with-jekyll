@@ -8,7 +8,7 @@ Following is one of the many array questions and is a good example that shows th
 
 # Problem statement 
 
-Write a function that takes in an non-empty array of distinct integers and an integer representing a target sum. If any two numbers in the input array sum up to the target sum, the function should return them in an array, in any order. If no two numbers sum up to the target sum, the function should return an empty array.
+Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. If any two numbers in the input array sum up to the target sum, the function should return them in an array, in any order. If no two numbers sum up to the target sum, the function should return an empty array.
 
 The two numbers must be two distinct integers in the array, you cannot add a single integer to itself in order to obtain the target sum 
 
@@ -149,7 +149,7 @@ def two_number_sum(array, targetSum):
 - space: O(1)
 
 ```sh
-# O(n) solution 
+# O(n^2) solution 
 def two_number_sum(array, targetSum):
     result = []
 	for num in array:
