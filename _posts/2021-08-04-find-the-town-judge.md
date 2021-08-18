@@ -5,6 +5,8 @@ date: 2021-08-05
 ---
 Here is an interesting problem that I enjoyed solving using UMPIRE method.
 
+![Judge](/images/town_judge.jpg)
+
 # Problem statement
 
 In a town, there are _n_ people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge.
