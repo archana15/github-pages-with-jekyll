@@ -79,7 +79,7 @@ Output: []
 - making use of hashmap we have managed to reduce the time complexity from O(n<sup>3</sup>) to O(n<sup>2</sup>) 
 - the above is implemented using hashmap
 
-Exploring the techniques involved in traversing the array helped me arrive at the following plan
+_Exploring the techniques involved in traversing the array helped me arrive at the following plan_
 
 **Technique**
 
