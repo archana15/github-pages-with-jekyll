@@ -5,7 +5,10 @@ date: 2021-08-05
 ---
 Here is an interesting problem that I enjoyed solving using UMPIRE method.
 
-![Judge](/images/town_judge.jpg)
+<p align="center">
+  <img width="460" height="300" src="/images/image_tj.jpg">
+</p>
+
 
 # Problem statement
 
