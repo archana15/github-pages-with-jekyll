@@ -5,7 +5,7 @@ date: 2021-08-05
 ---
 Here is an interesting problem that I enjoyed solving using UMPIRE method.
 
-- ![Find](/images/town_judge.jpg)
+![Find](/images/town_judge.jpg)
 
 # Problem statement
 
