@@ -15,8 +15,8 @@ I have gained deeper insights into machine learning algorithms through course pr
 - [Sentiment analysis of IMDB movie reviews](https://github.com/archanakalburgi/sentiment_analysis_imdb)
 
 Some of the other interesting projects that I have worked on include
-- [MLE classifier](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign2/Q1_MLE.ipynb)
-- [KNN classifier](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign2/Q2_KNN.ipynb)
+- [Built MLE classifier](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign2/Q1_MLE.ipynb)
+- [Built KNN classifier](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign2/Q2_KNN.ipynb)
 - [Reduced dimension of data using principal component analysis(PCA)](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign3/Q1_PCA.ipynb)
 - [Reduced dimension of data using fisher discriminant analysis(FDA)](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign3/Q3_FDA_pima_indians.ipynb)
 - [Identified misclassified labels using perceptron](https://github.com/archanakalburgi/my_coursework_stevens/blob/main/CS559/ML_Assign3/Q4_Perceptron.ipynb)
