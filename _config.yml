@@ -17,4 +17,4 @@ linkedin_username: archana-kalburgi
 background_image: /images/bg.jpg
 
 show_excerpts: false # set to false to remove excerpts on the homepage
-theme: minima
+theme: jekyll-theme-cayman
