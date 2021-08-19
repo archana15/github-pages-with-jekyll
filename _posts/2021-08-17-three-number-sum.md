@@ -79,13 +79,19 @@ Output: []
 - making use of hashmap we have managed to reduce the time complexity from O(n<sup>3</sup>) to O(n<sup>2</sup>) 
 - the above is implemented using hashmap
 
+**Sets**
+
+- there is not need to store hashmap[array[j]]:array[i],targetSum - (array[i] + array[j]), since we are only interested in knowing the third number of the triplet
+- to avoid storing the mapping we can use set which will give us a constant time look up while not consuming extra space 
+by just storing the numbers we have iterated through  
+
 _Exploring the techniques involved in traversing the array helped me arrive at the following plan_
 
 **Technique**
 
-**Two pointer approach:**
+**Three pointer approach:**
 
-- idea behind using two pointers:
+- idea behind using three pointers:
     - if we have a sorted array, we can place a _start_ pointer on the number to the right of the current number and _end_ pointer at the last number in the array
     - check if current number + array[start] + array[end] == targetSum
     - if start is incremented by 1 will increment the sum(current number + array[start] + array[end])
@@ -112,7 +118,7 @@ _Exploring the techniques involved in traversing the array helped me arrive at t
         ```
         - complexity
             - time: O(n<sup>2</sup>), where n=len(array)
-            - space: O(r), where r=len(result)
+            - space: O(3n) -> O(n), where n=len(array)
 
 # Implementation and Evaluate 
 
@@ -130,7 +136,7 @@ def threeNumberSum(array, targetSum):
 ```
 - complexity
     - time: O(n<sup>3</sup>) + O(3 log(3)) + O(r log(r)) -> O(n<sup>3</sup>), where n=len(array), r=len(result)
-    - space: O(r), where r=len(result)
+    - space: O(3n) -> O(n), where n=len(array)
 
 ```sh
 def threeNumberSum(array, targetSum):
@@ -146,7 +152,23 @@ def threeNumberSum(array, targetSum):
 ```
 - complexity
     - time: O(n<sup>2</sup>) + O(3 log(3)) + O(r log(r)) -> O(n<sup>2</sup>), where n=len(array), r=len(result)
-    - space: O(r), where r=len(result)
+    - space: O(n+2) + O(n) -> O(n), where n=len(array)
+
+```sh
+def threeNumberSum(array, targetSum):
+	result = []
+	for i in range(len(array)):
+		temp = set() # s: O(n)
+		for j in range(i+1,len(array)):
+			if targetSum-(array[i]+array[j]) in temp:
+				result.append(sorted([array[i],array[j],targetSum-(array[i]+array[j])]))
+			else:
+				temp.add(array[j]) 
+    return sorted(result)
+```
+- complexity 
+    - time: O(n<sup>2</sup>) + O(3 log(3)) + O(r log(r)) -> O(n<sup>2</sup>), where n=len(array), r=len(result)
+    - space: O(n) + O(3n) -> O(n), where n=len(array)
 
 ```sh
 def threeNumberSum(array, targetSum):
@@ -170,5 +192,5 @@ def threeNumberSum(array, targetSum):
 ```
 - complexity
     - time: O(n<sup>2</sup>), where n=len(array)
-    - space: O(r), where r=len(result)
+    - space: O(3n) -> O(n), where n=len(array)
 

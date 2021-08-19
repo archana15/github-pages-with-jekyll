@@ -38,33 +38,33 @@ Output: Not a valid test case
 - given input is a list, so we have to iterate through the list to arrive at the solution 
 - let us look at how does one of the solutions looks like and it's complexity 
 
-**Plan**
+    - **Plan**
 
-```sh
-// for i in 0-len(array): # t: O(n)
-    // for j in i+1-len(array): # t: O(n)
-        // if array[i] + array[j] == targetSum
-            return [array[i], array[j]]
-```
-- Complexity:
-    - time: O(n<sup>2</sup>), where n = len(array)
-    - space: O(1)
+        ```sh
+        // for i in 0-len(array): # t: O(n)
+            // for j in i+1-len(array): # t: O(n)
+                // if array[i] + array[j] == targetSum
+                    return [array[i], array[j]]
+        ```
+        - Complexity:
+            - time: O(n<sup>2</sup>), where n = len(array)
+            - space: O(1)
 
-- we can optimize the above solution to get an O(n) solution
+    - we could _in_ operator as follows
 
-**Plan**
+    - **Plan**
 
-```sh
-// result = []
-// for num in array: # t: O(n)
-    // if (targetSum - num) in array and (targetSum - num) != num: # t: O(n) in operation 
-        result->add[num, (targetSum-num)]
-        return result
-return result 
-```
-- Complexity:
-    - time: O(n<sup>2</sup>), where n=len(array)
-    - space: O(1) 
+        ```sh
+        // result = []
+        // for num in array: # t: O(n)
+            // if (targetSum - num) in array and (targetSum - num) != num: # t: O(n) in operation 
+                result->add[num, (targetSum-num)]
+                return result
+        return result 
+        ```
+        - Complexity:
+            - time: O(n<sup>2</sup>), where n=len(array)
+            - space: O(1) 
 
 **Linked list**
 
@@ -72,21 +72,21 @@ return result
 
 **Hashset**
 
-- we can solve this problem using set 
+- we can solve this problem using set, where you just have to remember if you have seen the difference before while iterating through the list, if yes return the two numbers if not then add the number to the set
 
-**Plan**
+    - **Plan**
 
-```sh
-// hashset = set() , result = [] # s: O(n), O(1)
-// for 0-len(array) # t: O(n)
-    if array[i] in hashset: # t: O(1)
-        return array[i], targetSum-array[i]
-    else
-        hashset(targetSum-array[i]) # t: O(1)
-```
-- Complexity:
-    - time: O(n) + O(1) + O(1) -> O(n), n=len(array)
-    - space: O(n) 
+        ```sh
+        // hashset = set() , result = [] # s: O(n), O(1)
+        // for 0-len(array) # t: O(n)
+            if targetSum-array[i] in hashset: # t: O(1)
+                return array[i], targetSum-array[i]
+            else
+                hashset(array[i]) # t: O(1)
+        ```
+        - Complexity:
+            - time: O(n) + O(1) + O(1) -> O(n), n=len(array)
+            - space: O(n) 
 	
 **Stack or Queue**
 
@@ -98,19 +98,26 @@ return result
 
 **Technique**
 
-- **Binary search**
+- **Two pointers**
 
-    ```sh
-    // result = []
-    // sort the array # t: O(n log(n))
-    // perform binary search to find targetSum where,
-        value = targetSum
-    // return result
-    ```
+- idea behind using two pointers:
+    - if we have a sorted array, we can place a _start_ pointer at the first number of the array _end_ pointer at the last number in the array
+    - check if array[start] + array[end] == targetSum
+    - if start is incremented by 1 will increment the sum(array[start] + array[end])
+    - where as decrementing the end by 1 will reduce the sum(array[start] + array[end])
+    - with this information we can obtain the list of two numbers ([array[start], array[end]]) which sum up to the targetSum
 
-    - Complexity:
-        - time: O(n log(n)), where n = len(array)
-        - space: O(1)
+    - **Plan**
+        ```sh
+        // result = []
+        // sort the array # t: O(n log(n))
+        // using points look for the two numbers whose sum = targetSum
+            // return the two numbers
+        ```
+
+        - Complexity:
+            - time: O(n), where n = len(array)
+            - space: O(1) 
 
 
 # Implement 
@@ -130,7 +137,20 @@ def two_number_sum(array, targetSum):
 - space: O(1)
 
 ```sh
-# O(n log(n)) solution
+# O(n^2) solution 
+def two_number_sum(array, targetSum):
+    result = []
+	for num in array:
+		if (targetSum - num) in array and (targetSum - num) != num:
+			result.extend([num, (targetSum-num)])
+			return result
+	return result 
+```
+- time: O(n<sup>2</sup>) 
+- space: O(1) 
+
+```sh
+# O(n) solution
 def two_number_sum(array, targetSum):
     array = sorted(array)
     start = 0
@@ -145,32 +165,19 @@ def two_number_sum(array, targetSum):
             right -= 1
     return []
 ```
-- time: O(n log(n)), where n = len(array)
-- space: O(1)
-
-```sh
-# O(n^2) solution 
-def two_number_sum(array, targetSum):
-    result = []
-	for num in array:
-		if (targetSum - num) in array and (targetSum - num) != num:
-			result.extend([num, (targetSum-num)])
-			return result
-	return result 
-```
-- time: O(n)
+- time: O(n), where n = len(array)
 - space: O(1)
 
 ```sh
 # O(n) solution using hashset
-def two_number_sum(array, targetSum):
-    hashset = set()
+def twoNumberSum(array, targetSum):
+	temp = set()
 	for i in range(len(array)):
-		if array[i] in hashset:
-			return array[i], (targetSum-array[i])
+		if targetSum-(array[i]) in temp:
+			return array[i], targetSum-array[i]
 		else:
-			hashset.add(targetSum-array[i])
-	return []
+			temp.add(array[i]) 
+    return []
 ```
 - time: O(n)
 - space: O(n)
