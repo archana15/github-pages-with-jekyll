@@ -47,7 +47,7 @@ Output: [[2,2,2],[2,2,2]]
 
 - since it's already given that we have to consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, we can perform either DFS or BFS from image[sr][sc] and reach it's valid neighbor to change the value to newColor 
 - in this post we will look at both bfs and dfs implementation 
-- we change the value only if the value of the is is equal to image[sr][sc] value
+- we change the value only if the value of the is equal to image[sr][sc] value
 
 # Plan
 
@@ -116,7 +116,7 @@ class Flood_fill:
 
 - consider the input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, newColor = 2
 - the bfs traversal of the matrix is shown in the figure below 
-- ![BFS](/images/bfs.jpg)
+![BFS](/images/bfs.jpg)
     - the numbers in green and that are circled represent the order in which the cells are visited
 - status of the queue while doing a bfs traversal\
 1 1 [(2, 1), (0, 1), (1, 2), (1, 0)]\
@@ -127,7 +127,7 @@ class Flood_fill:
     2 0 [(1, 0), (2, 1)]
 
 - the dfs traversal of the matrix is shown in the figure below 
-- ![DFS](/images/dfs.jpg)
+![DFS](/images/dfs.jpg)
     - the numbers in green and that are circled represent the order in which the cells are visited
 - status of the stack while doing a dfs traversal\
 1 1 [(2, 1), (0, 1), (1, 2), (1, 0)]\
