@@ -6,6 +6,10 @@ date: 2021-08-15
 
 Solving the following problem helped me better understand how to traverse a matrix and how to get the valid neighbors of a cell in the matrix
 
+<p align="center">
+  <img width="460" height="300" src="/images/image_ff.jpg">
+</p>
+
 # Problem statement
 
 An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
