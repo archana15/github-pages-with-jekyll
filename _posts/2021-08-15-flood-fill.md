@@ -22,14 +22,14 @@ Return the modified image after performing the flood fill.
 
 # Understand 
 
-Input: image = [[1,0,1,1],[1,1,1,1]] , sr=1, sc=1, newColor=2\
+Input: image = [[1,0,1,1],[1,1,1,1]] , sr=1, sc=1, newColor=2
 <p align="center">
   <img width="300" height="200" src="/images/input_ff.jpg">
 </p>
 
-Output: [[2,0,2,2],[2,2,2,2]]\
+Output: [[2,0,2,2],[2,2,2,2]]
 <p align="center">
-  <img width="300" height="200" src="/images/output_ff.jpg">
+  <img width="600" height="400" src="/images/output_ff.jpg">
 </p>
 
 - Explanation:
