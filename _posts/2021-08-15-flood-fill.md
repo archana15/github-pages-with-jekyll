@@ -29,7 +29,7 @@ Input: image = [[1,0,1,1],[1,1,1,1]] , sr=1, sc=1, newColor=2
 
 Output: [[2,0,2,2],[2,2,2,2]]
 <p align="center">
-  <img width="600" height="400" src="/images/output_ff.jpg">
+  <img width="500" height="400" src="/images/output_ff.jpg">
 </p>
 
 - Explanation:
