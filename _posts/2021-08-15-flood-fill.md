@@ -23,9 +23,15 @@ Return the modified image after performing the flood fill.
 # Understand 
 
 Input: image = [[1,0,1,1],[1,1,1,1]] , sr=1, sc=1, newColor=2\
-![](/images/input_ff.jpg)\
+<p align="center">
+  <img width="300" height="200" src="/images/input_ff.jpg">
+</p>
+
 Output: [[2,0,2,2],[2,2,2,2]]\
-![](/images/output_ff.jpg) 
+<p align="center">
+  <img width="300" height="200" src="/images/output_ff.jpg">
+</p>
+
 - Explanation:
     - we have to perform flood fill from the cell with row = sr and column = sc
     - in this example we can perform flood fill on the cells left, right and above the cell (sr,sc) and change their values to newColor only if image[row][col] == image[sr][sc] 
