@@ -6,7 +6,7 @@ date:   2021-07-28
 Based on my understanding
 
 <p align="center">
-  <img width="400" height="300" src="/images/loop.png">
+  <img width="400" height="300" src="/images/loop.jpg">
 </p>
 
 - **for loop** is used when you know how many times you want to iterate over an iterable
