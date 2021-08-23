@@ -4,9 +4,8 @@ title:  "Choosing the loops!"
 date:   2021-07-28 
 ---
 Based on my understanding
-
 <p align="center">
-  <img width="400" height="300" src="/images/loop.jpg">
+  <img width="460" height="300" src="/images/loop.jpg">
 </p>
 
 - **for loop** is used when you know how many times you want to iterate over an iterable
