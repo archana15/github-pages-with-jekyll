@@ -6,7 +6,7 @@ date: 2021-08-23
 
 Solving this problem helped me understand the order of techniques I can explore to arrive at the solution for an array problem. 
 <p align="center">
-    <img width="300" height="400" src="/images/vs-title.jpg">
+    <img width="400" height="300" src="/images/vs-title.jpg">
 </p>
 
 # Problem statement 
