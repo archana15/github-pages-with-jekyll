@@ -7,7 +7,7 @@ date: 2021-08-23
 Solving this problem helped me understand the order of techniques I can explore to arrive at the solution for an array problem. 
 <p align="center">
     <img width="300" height="400" src="/images/vs-title.jpg">
-    </p>
+</p>
 
 # Problem statement 
 
@@ -96,11 +96,12 @@ def isValidSubsequence(array, sequence):
 
 # Review 
 
-lets dry run the code with the following test case:
-    array = [1,2,3], sequence = [1,3]
-    <p align="center">
-    <img width="400" height="200" src="/images/vs.jpg">
-    </p>
+lets dry run the code with the following test case:\
+array = [1,2,3], sequence = [1,3]
+
+<p align="center">
+    <img width="500" height="200" src="/images/vs.jpg">
+</p>
 
 # Evaluate 
 
