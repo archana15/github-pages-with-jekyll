@@ -100,7 +100,7 @@ lets dry run the code with the following test case:\
 array = [1,2,3], sequence = [1,3]
 
 <p align="center">
-    <img width="500" height="200" src="/images/vs.jpg">
+    <img width="600" height="200" src="/images/vs.jpg">
 </p>
 
 # Evaluate 
