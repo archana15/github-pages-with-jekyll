@@ -4,6 +4,11 @@ title: "Kth largest value of binary search tree"
 date: 2021-08-14
 ---
 The following problem helped me understand that in-order traversal of a binary search tree yields a sorted array.
+<p align="center">
+    <img width="400" height="300" src="/images/trees.jpg">
+</p>
+
+![source](https://www.explainxkcd.com/wiki/index.php/71:_In_the_Trees)
 
 # Problem statement 
 
