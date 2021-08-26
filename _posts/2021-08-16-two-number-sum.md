@@ -4,9 +4,14 @@ title: "Two number sum"
 date: 2021-08-16
 ---
 
-Following is one of the many array questions and is a good example that shows the time and space complexity trade off
+Following is one of the many array questions and is a good example that shows the time and space complexity trade off 
+<p align="center">
+  <img width="300" height="460" src="/images/two_num_sum">
+</p>
 
-# Problem statement 
+[image source](https://www.pinterest.se/pin/466192998921808715/) 
+
+# Problem statement  
 
 Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. If any two numbers in the input array sum up to the target sum, the function should return them in an array, in any order. If no two numbers sum up to the target sum, the function should return an empty array.
 
@@ -70,10 +75,10 @@ Output: Not a valid test case
 
 - complicates the solution 
 
-**Hashset**
+**Hash-set**
 
 - we can solve this problem using set, where you just have to remember if you have seen the difference before while iterating through the list, if yes return the two numbers if not then add the number to the set
-
+- don't look for the the second number just look for the difference, inspired from the image 
     - **Plan**
 
         ```sh

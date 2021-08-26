@@ -6,6 +6,12 @@ date: 2021-08-17
 
 Another example that shows the time and space complexity trade off
 
+<p align="center">
+  <img width="300" height="460" src="/images/three_num_sum">
+</p>
+
+[image source](https://www.datamation.com/?s=geek+%26+poke)
+
 # Problem statement 
 
 Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. The function should find all the triplets in the array that sum up to the target sum and return a two-dimensional array  of all these triplets. The numbers in each triplet should be ordered in ascending order, and the triplets themselves should be ordered in ascending order with respect to the numbers they hold.
