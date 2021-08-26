@@ -6,7 +6,7 @@ date: 2021-08-16
 
 Following is one of the many array questions and is a good example that shows the time and space complexity trade off 
 <p align="center">
-  <img width="300" height="460" src="/images/two_num_sum">
+  <img width="300" height="460" src="/images/two_num_sum.jpg">
 </p>
 
 [image source](https://www.pinterest.se/pin/466192998921808715/) 
