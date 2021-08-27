@@ -7,7 +7,7 @@ date: 2021-08-17
 Another example that shows the time and space complexity trade off
 
 <p align="center">
-  <img width="400" height="200" src="/images/three_num_sum.jpg">
+  <img width="300" height="460" src="/images/three_num_sum.jpg">
 </p>
 
 [image source](https://www.datamation.com/?s=geek+%26+poke)
