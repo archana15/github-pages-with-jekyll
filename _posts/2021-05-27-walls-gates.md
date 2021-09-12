@@ -39,9 +39,9 @@ Example 3:
 # Match and plan 
 
 - From the gate we have to go to the neighboring cells and mark the cells with the shortest distance from the nearest gate
-- This is graph problem where we have to traverse the give matrix and update the values in the cells
-- We can traverse the matrix using either BFS or DFS 
-- I have use BFS to traverse the matrix because we have to find the shortest distance and BFS will help us find the shortest distance 
+- This is graph problem where we have to traverse the given matrix and update the values in the cells
+- We can traverse the matrix with BFS or DFS way
+- I have used BFS to traverse the matrix because we have to find the shortest distance and BFS will help us find the shortest distance 
 
 **Logical steps:**
 
@@ -89,6 +89,19 @@ def wallsAndGates(rooms):
                 bfs(row, column, rooms)
 ```
 
+- After discussing the above implementation with a few of my friends, I found the following implementation for getting the valid neighbors of cell much easier to read and understand.  
+
+```sh
+def valid_neighbors(r,c,row,col):
+    valid = []
+    neighbors = [(r,c-1),(r,c+1),(r-1,c),(r+1,c)]
+    for (nr,nc) in neighbors:
+        if 0 <= nr < row and 0 <= nc < col:
+            valid.append((nr,nc))
+    return valid
+```
+_notice something about the "if condition"?_
+
 **Alternatively**
 
 one might think of implementing the following logic to update the distance in the cell
@@ -114,8 +127,11 @@ distance +=1
 # Evaluate 
 
 Complexity 
-- time: O(mn), where m is number of rows and n is number of columns
+- time: O(mng), where m = number of rows, n = number of columns and g = number of gates
     - BFS takes m*n steps to reach a all rooms a gate
+    - BFS from every single gate
 - space: O(mn), where m is number of rows and n is number of columns
     - we are making use of a queue in BFS to explore the unvisited cells 
     - visited set 
+
+_Leaving with a question: How can we optimize time complexity and make it O(mn). I shall explore this in my next post_
