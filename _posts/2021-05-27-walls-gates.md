@@ -6,7 +6,7 @@ date: 2021-09-11
 
 <p align="center">
     <img width="600" height="300" src="/images/walls_gates.jpg">
-</p
+</p>
 
 [image source](https://www.freecodecamp.org/news/coding-explained-in-25-profound-comics-8847ea03819c/)
 
