@@ -112,8 +112,8 @@ for (nr,nc) in valid_neighbors(ro, col, len(rooms), len(rooms[0])):
         queue.append((nr,nc,distance+1))
 ```
 
-- in the above scnario we are not checking if the cells are already visited, instead checking if the values is the cell is greater than distance which works fine but it takes a longer computational time for a mucnh bigger matrix as we are have to visit all the cells 
-- in oder to avoid such a scenario we update the cell with min(rooms[ro][col], distance) and ammend our code as follows 
+- in the above scenario we are not checking if the cells are already visited, instead checking if the values is the cell is greater than distance which works fine but it takes a longer computational time for a much bigger matrix as we are have to visit all the cells 
+- in oder to avoid such a scenario we update the cell with min(rooms[ro][col], distance) and amend our code as follows 
 
 ```sh
 rooms[ro][col] = min(rooms[ro][col], distance)
@@ -127,11 +127,11 @@ distance +=1
 # Evaluate 
 
 Complexity 
-- time: O(mng), where m = number of rows, n = number of columns and g = number of gates
+- time: O(omg), where o = number of rows, m = number of columns and g = number of gates
     - BFS takes m*n steps to reach a all rooms a gate
     - BFS from every single gate
-- space: O(mn), where m is number of rows and n is number of columns
+- space: O(om), where o is number of rows and m is number of columns
     - we are making use of a queue in BFS to explore the unvisited cells 
     - visited set 
 
-_Leaving with a question: How can we optimize time complexity and make it O(mn). I shall explore this in my next post_
+_Leaving with a question: How can we optimize time complexity and make it O(om). I shall explore this in my next post_
