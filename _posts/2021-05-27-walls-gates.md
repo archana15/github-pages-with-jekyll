@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Three number sum"
-date: 2021-08-17
+title: "Matrix - Breadth first search"
+date: 2021-09-11
 ---
 
 <p align="center">
