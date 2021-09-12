@@ -12,7 +12,7 @@ date: 2021-09-11
 
 # Problem statement 
 
-You are given an m x n grid rooms initialized with these three possible values. 
+Given a m x n grid rooms initialized with these three possible values. 
 - -1 A wall or an obstacle.
 - 0 A gate.
 - INF Infinity means an empty room. We use the value 2 <sup> 31 </sup> - 1 = 2147483647 to represent INF as you may assume that the distance to a gate is less than 2147483647.
@@ -49,9 +49,9 @@ Example 3:
 - source cell is the fist cell with value = 0 (gate)
 - go to neighbors of the source and change the value of the neighboring cell with minimum(value of cell, distance) 
 - perform above step only if 
-    - 1. value != -1 (wall)
-    - 2. value != 0 (gate)
-    - 3. if cell is not visited
+    1. value != -1 (wall)
+    2. value != 0 (gate)
+    3. if cell is not visited
 
 So the first wo conditions where we are avoiding visiting a cell is the additional conditions we must take care in solving this problem
 
