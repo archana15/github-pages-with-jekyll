@@ -89,7 +89,7 @@ def wallsAndGates(rooms):
                 bfs(row, column, rooms)
 ```
 
-- After discussing the above implementation with a few of my friends, I found the following implementation for getting the valid neighbors of cell much easier to read and understand.  
+- After discussing the above implementation with a few of my friends, I found their suggestions regarding implementing the code to get the valid neighbors of a cell helpful and adopted the following, which much easier to understand and read.  
 
 ```sh
 def valid_neighbors(r,c,row,col):
