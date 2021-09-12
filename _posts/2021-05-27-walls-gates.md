@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Matrix - Breadth first search"
+title: "Walls and gates - Breadth first search"
 date: 2021-09-11
 ---
 
