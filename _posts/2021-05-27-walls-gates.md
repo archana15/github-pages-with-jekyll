@@ -113,7 +113,7 @@ for (nr,nc) in valid_neighbors(ro, col, len(rooms), len(rooms[0])):
 ```
 
 - in the above scenario we are not checking if the cells are already visited, instead checking if the values is the cell is greater than distance which works fine but it takes a longer computational time for a much bigger matrix as we are have to visit all the cells 
-- in oder to avoid such a scenario we update the cell with min(rooms[ro][col], distance) and amend our code as follows 
+- in order to avoid this we could update the cell with min(rooms[ro][col], distance) and amend our code as follows 
 
 ```sh
 rooms[ro][col] = min(rooms[ro][col], distance)
