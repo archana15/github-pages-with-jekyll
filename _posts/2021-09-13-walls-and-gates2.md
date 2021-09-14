@@ -4,6 +4,12 @@ title: "Walls and gates - omg to om!"
 date: 2021-09-13
 ---
 
+<p align="center">
+  <img width="500" height="300" src="/images/ogm_to_om.png">
+</p>
+
+[image source](https://www.azenhut.com/2018/02/28/dogs-in-meditation/) 
+
 In my previous [blog post](https://archanakalburgi.github.io/2021/09/11/walls-gates.html), I implemented an O(omg) time complexity, well soon I discovered that the solution can be further optimized and the time complexity can be reduced from omg to om. OMG right!?
 
 What made the previous implementation's time complexity omg?
