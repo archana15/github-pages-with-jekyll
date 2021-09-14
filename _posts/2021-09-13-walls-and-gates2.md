@@ -5,7 +5,7 @@ date: 2021-09-13
 ---
 
 <p align="center">
-  <img width="500" height="200" src="/images/ogm_to_om.jpg">
+  <img width="500" height="150" src="/images/ogm_to_om.jpg">
 </p>
 
 [image source](https://www.azenhut.com/2018/02/28/dogs-in-meditation/) 
