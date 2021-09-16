@@ -53,18 +53,19 @@ def bfs(row,col,rooms):
                     visited.add((nr,nc))
 
 def wallsAndGates(rooms):
- ro = len(rooms)
- column = len(rooms[0])
+    ro = len(rooms)
+    column = len(rooms[0])
  
- for row in range(ro):
-    for col in range(column):
-        if rooms[row][col] == 0:
-            bfs(row,col,rooms)
+    for row in range(ro):
+        for col in range(column):
+            if rooms[row][col] == 0:
+                bfs(row,col,rooms)
 ```
 
 - with this implementation, we are checking the cell once and update the value only if the current distance is smaller than the value in the cell.
 - what I found very delightful is that we do not have to worry about the 0 and -1 value in the cell, which represents a gate and a wall because 0 or -1 cannot be greater than the distance 
 - the following condition in bfs() function will take care of the above
+
 ```sh
 if rooms[nr][nc] > dist
 ```
