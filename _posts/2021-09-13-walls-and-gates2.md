@@ -16,16 +16,16 @@ What made the previous implementation's time complexity omg?
 
 ```sh
 def wallsAndGates(rooms):
- for row in range(len(rooms)):
- for column in range(len(rooms[0])):
- if rooms[row][column] == 0:
- bfs(row, column, rooms)
+    for row in range(len(rooms)):
+        for column in range(len(rooms[0])):
+            if rooms[row][column] == 0:
+                bfs(row, column, rooms)
 ```
 
 BFS is called on every gate in the matrix
-```
+```sh
 if rooms[row][column] == 0:
- bfs(row, column, rooms)
+    bfs(row, column, rooms)
 ```
 Even though the time complexity of BFS is O(om), calling it on every gate in the grid make the overall implementation an O(omg) solution\
 Instead of starting BFS on every gate, starting BFS from the first gate and updating the values of cells with the shortest distance will reduce the time complexity\
