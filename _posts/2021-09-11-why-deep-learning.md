@@ -9,7 +9,7 @@ One of the questions I have been trying to answer is why deep learning algorithm
 ## Machine learning algorithms
 
 <p align="center">
- <img width="600" height="300" src="/images/themes_ml.jpg">
+ <img width="700" height="500" src="/images/themes_ml.jpg">
 </p>
 
 There are numerous ML algorithms, for a better understanding I like to classify them under three themes.
