@@ -4,7 +4,7 @@ title: Why deep learning?
 date: 2021-09-21
 ---
 
-One of the questions I have been trying to answer is why deep learning algorithms are over traditional machine learning algorithms and what can we accomplish with deep learning algorithms that we can't with machine learning algorithms. After reflecting on what I covered while studying Machine Learning(ML) and what I would cover in a deep learning course. 
+One of the questions I have been trying to answer is why deep learning algorithms over traditional machine learning algorithms. What can we accomplish with deep learning algorithms that we can't with machine learning algorithms. After reflecting on what I had covered while studying Machine Learning(ML) and what I would cover in a deep learning course I was able to answer the question. 
 
 ## Machine learning algorithms
 
@@ -19,7 +19,7 @@ There are numerous ML algorithms, for a better understanding I like to classify 
     - Algorithms based on distance
         - Example: knn
     - Linear algebraic model 
-    - Example: SVM, linear regression, logistic regression, perceptron
+        - Example: SVM, linear regression, logistic regression, perceptron
 2. Machine learning theme 
     - Supervised machine learning algorithms 
         - Examples: Naive bayes, decision trees, SVM, knn
@@ -46,9 +46,9 @@ But how can we classify non-separable data points(something like the following),
  <img width="400" height="400" src="/images/non_linearly_sep.jpg">
 </p>
 
-- To classify the above points into red, blue, and black classes we need a complex model. This is where deep learning algorithms can be helpful 
+- To classify the above points into red, blue, and black classes we need a complex model. This is where deep learning(DL) algorithms can be helpful. With DL algorithm we can classify the data points into red, blue and black classes (multi label). 
 
 In conclusion, deep learning algorithms are used when 
-- Data set is complex
-- The data size is large 
-- Model had to train in a reasonable amount of time 
+- Data set is non-linearly separable.
+- The data size is large. 
+- Amount of time available for training the data is reasonable.
