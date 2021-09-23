@@ -12,7 +12,7 @@ One of the questions I have been trying to answer is why deep learning algorithm
  <img width="800" height="500" src="/images/themes_ml.jpg">
 </p>
 
-There are numerous ML algorithms, for a better understanding I like to classify them under three themes.
+There are numerous ML algorithms, for a better understanding we can classify them under three themes.
 1. Mathematical theme
     - Algorithms based on probability
         - Example: Maximum likelihood classification
