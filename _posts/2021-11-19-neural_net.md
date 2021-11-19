@@ -26,7 +26,7 @@ A linear model can be visualized as follows to predict the _Y_ value for the abo
 Recalling the equation for the hyperplane (a line may be with a slope), the linear model can be given as follows
 
 <p align="center">
-  <img width="400" height="200" src="/images/neural_nets/percep_wrong_eq.png">
+  <img width="400" height="150" src="/images/neural_nets/percep_wrong_eq.png">
 </p>
 
 The above cannot be multiplied since they are incompatible. You can handle this issue by performing a transpose on either the input matrix or the weight matrix. Due to the convention followed in representing the input as a columnar matrix, I took the transpose of the input matrix for this post.
@@ -57,7 +57,7 @@ There is something important to note here, which is a neural network with a sing
 The above neural network can be represented by the following system of equations:
 
 <p align="center">
-  <img width="300" height="200" src="/images/neural_nets/mlp_eqs.png">
+  <img width="400" height="250" src="/images/neural_nets/mlp_eqs.png">
 </p>
 
 Activation function scales output into the [0, 1] range. Depending on the problem statement we predict the value _Y’_. 
@@ -73,7 +73,7 @@ In order to learn how to input data of _n_ rows and _m_ columns into neural netw
 The neural network for the above example can be designed as follows
 
 <p align="center">
-  <img width="650" height="500" src="/images/neural_nets/house_nn.png">
+  <img width="650" height="400" src="/images/neural_nets/house_nn.png">
 </p>
 
 This is a system of equations for predicting the price of a house given its details, like the number of bedrooms, bathrooms, location, etc.
