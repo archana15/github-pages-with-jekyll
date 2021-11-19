@@ -8,11 +8,11 @@ date: 2021-11-19
   <img width="460" height="300" src="/images/neural_nets/nn_cover.png">
 </p>
 
-In my previous post [Why deep learning?](https://archanakalburgi.github.io/2020/09/21/why-deep-learning.html), I gave reasons why one would choose deep learning algorithms. An explanation of what a deep learning algorithm solves that a machine learning algorithm does not. In this post, I'd like to explore deep learning algorithms and how their input looks like.
+In my previous post [Why deep learning?](https://archanakalburgi.github.io/2020/09/21/why-deep-learning.html) I gave reasons why one would choose deep learning algorithms. An explanation of what a deep learning algorithm solves that a machine learning algorithm does not. In this post, I'd like to explore deep learning algorithms and how their input looks like.
 
 Learning about linear models is essential to understanding neural networks and how do we visualize this type of model?
 
-In the linear model, the data points are separated by hyperplanes given by the formula $$y=mx+c$$, where _m_ is the slope of the hyperplane and _c_ is the intercept, or the position where the hyperplane meets the axis. 
+In the linear model, the data points are separated by hyperplanes which is given by the formula <img src="https://render.githubusercontent.com/render/math?math=y=mx%2B">, where _m_ is the slope of the hyperplane and _c_ is the intercept, or the position where the hyperplane meets the axis. 
 
 As an example, let's look at the following\
 let  X = [1, 0, 1], W = [1, 1, 1] and b = 1 
