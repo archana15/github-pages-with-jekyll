@@ -57,7 +57,7 @@ There is something important to note here, which is a neural network with a sing
 The above neural network can be represented by the following system of equations:
 
 <p align="center">
-  <img width="400" height="250" src="/images/neural_nets/mlp_eqs.png">
+  <img width="300" height="200" src="/images/neural_nets/mlp_eqs.png">
 </p>
 
 Activation function scales output into the [0, 1] range. Depending on the problem statement we predict the value _Y’_. 
@@ -73,13 +73,13 @@ In order to learn how to input data of _n_ rows and _m_ columns into neural netw
 The neural network for the above example can be designed as follows
 
 <p align="center">
-  <img width="650" height="300" src="/images/neural_nets/house_nn.png">
+  <img width="650" height="500" src="/images/neural_nets/house_nn.png">
 </p>
 
 This is a system of equations for predicting the price of a house given its details, like the number of bedrooms, bathrooms, location, etc.
 
 <p align="center">
-  <img width="400" height="300" src="/images/neural_nets/house_eqs.png">
+  <img width="400" height="200" src="/images/neural_nets/house_eqs.png">
 </p>
 
 In this example, we have n houses and 4 features, so the input matrix will be _nX4_. Due to the two hidden nodes in this example, we would need to initialize 2 new weights if we were to add more features. As the dataset grows, the input matrix will have more rows. Adding one more node to the existing network would add a column to the weight matrix.
