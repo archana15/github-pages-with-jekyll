@@ -12,7 +12,7 @@ In my previous post [Why deep learning?](https://archanakalburgi.github.io/2020/
 
 Learning about linear models is essential to understanding neural networks and how do we visualize this type of model?
 
-In the linear model, the data points are separated by hyperplanes which is given by the formula <img src="https://render.githubusercontent.com/render/math?math=y=mx%2B">, where _m_ is the slope of the hyperplane and _c_ is the intercept, or the position where the hyperplane meets the axis. 
+In the linear model, the data points are separated by hyperplanes which is given by the formula <img src="https://render.githubusercontent.com/render/math?math=y=mx%2Bb">, where _m_ is the slope of the hyperplane and _c_ is the intercept, or the position where the hyperplane meets the axis. 
 
 As an example, let's look at the following\
 let  X = [1, 0, 1], W = [1, 1, 1] and b = 1 
